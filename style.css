@@ -1,0 +1,462 @@
+/* --- General Styles --- */
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h1 .bible {
+  color: #007bff; 
+}
+
+h1 .app {
+  color: #ffc107; 
+}
+
+/* --- Top Bar --- */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* --- Labels and Inputs --- */
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em; 
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* --- Buttons --- */
+
+button,
+.top-buttons a {
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Specific button colors */
+#shareSelected, 
+#shareSelectedTop { 
+  background-color: #3b5998; 
+}
+
+#copySelected, 
+#copySelectedTop {
+  background-color: #ff9900; 
+}
+
+#dailyDevotionalButton {
+  background-color: #007bff; 
+}
+
+#darkModeToggle {
+  background-color: #6c757d; 
+}
+
+#decreaseFont, 
+#increaseFont {
+  background-color: #28a745; 
+}
+
+#searchButton {
+  background-color: #ffc107; 
+}
+
+#prevChapter, 
+#nextChapter,
+#prevChapterTop, 
+#nextChapterTop {
+  background-color: #5cb85c; 
+}
+
+button:hover,
+.top-buttons a:hover {
+  opacity: 0.8; 
+}
+
+button:active {
+  transform: translateY(1px); 
+}
+
+/* --- Verse Display --- */
+
+#answerDisplay {
+  margin-top: 20px;
+  font-size: 1em; 
+  line-height: 1.8;
+  min-font-size: 10px; 
+  max-font-size: 30px; 
+}
+
+.verse-by-verse p {
+  margin-bottom: 10px;
+}
+
+.verse-number {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #888;
+}
+
+.verse-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.verse-reference {
+  font-weight: bold;
+}
+
+.verse-text {
+  flex-grow: 1;
+  margin-left: 10px; 
+}
+
+.verse-checkbox {
+  margin-right: 10px;
+}
+
+/* --- Navigation --- */
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.chapter-navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chapter-navigation button {
+  flex: 1 0 150px; 
+}
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation div {
+  flex: 1;
+}
+
+/* --- Top Buttons --- */
+
+.top-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-between; 
+}
+
+.top-buttons .pills-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+.top-buttons .instruction-text {
+  font-size: 0.8em; 
+  margin: 0 10px; 
+}
+
+.top-buttons .font-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.top-buttons div button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  font-size: 1em;
+}
+
+/* --- Pill Styles --- */
+
+.pills-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  background-color: white; 
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pill span {
+  margin: 0 5px; /* Add some space between the spans */
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: white; 
+  cursor: pointer;
+}
+
+.pill span#bookPill {
+  flex-grow: 1; 
+}
+
+.pill span select {
+  border: none;
+  background: none; 
+  color: black; 
+  padding: 0; /* Remove extra padding from select */
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none; /* For some browsers */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.pill span select:focus {
+  outline: none;
+}
+
+.pill span:hover {
+  background-color: #f1f1f1; 
+}
+
+/* --- Verse Link --- */
+
+.verse-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.dark-mode .verse-link {
+  color: lightblue;
+}
+
+/* --- Search Container --- */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-container input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+.search-container button {
+  padding: 8px 15px;
+  font-size: 1rem;
+}
+
+/* --- Share Options --- */
+
+.share-options { 
+  margin-top: 10px;
+}
+
+.share-options a { 
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* --- Dark Mode --- */
+
+.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-mode .container {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1 {
+  color: #eee;
+}
+
+.dark-mode label {
+  color: #ccc;
+}
+
+.dark-mode input[type="text"],
+.dark-mode select {
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #666;
+}
+
+.dark-mode button,
+.dark-mode .top-buttons a {
+  background-color: #555; 
+}
+
+.dark-mode #shareSelected,
+.dark-mode #shareSelectedTop {
+  background-color: #2a3b55; 
+}
+
+.dark-mode #copySelected,
+.dark-mode #copySelectedTop {
+  background-color: #cc7a00; 
+}
+
+.dark-mode #dailyDevotionalButton {
+  background-color: #0056b3; 
+}
+
+.dark-mode #darkModeToggle {
+  background-color: #555; 
+}
+
+.dark-mode #decreaseFont,
+.dark-mode #increaseFont {
+  background-color: #1e7e34; 
+}
+
+.dark-mode #searchButton {
+  background-color: #b38600; 
+}
+
+.dark-mode #prevChapter,
+.dark-mode #nextChapter,
+.dark-mode #prevChapterTop,
+.dark-mode #nextChapterTop {
+  background-color: #4cae4c; 
+}
+
+.dark-mode button:hover,
+.dark-mode .top-buttons a:hover {
+  opacity: 0.8; 
+}
+
+.dark-mode #answerDisplay {
+  color: #ccc;
+}
+
+.dark-mode .verse-container {
+  background-color: #222;
+  border: 1px solid #444;
+}
+
+.dark-mode .pill {
+  background-color: #444; 
+}
+
+.dark-mode .pill span {
+  background-color: #444; 
+}
+
+.dark-mode .pill span select {
+  background-color: #444; 
+  color: #eee; 
+}
+
+/* --- Highlighted Verse --- */
+.highlighted {
+  background-color: #add8e6; 
+}
+
+.dark-mode .highlighted {
+  background-color: #5f9ea0; 
+  color: black; 
+}
+
+/* --- Loading Spinner --- */
+
+.loader {
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- Responsiveness --- */
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 95%;
+    margin: 10px;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+  }
+
+  .navigation,
+  .chapter-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation button,
+  .chapter-navigation button {
+    margin-top: 5px;
+    width: 100%;
+  }
+}

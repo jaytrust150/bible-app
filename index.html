@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar"> 
+            <button id="dailyDevotionalButton">Daily Devotional</button>
+            <h1><span class="bible">Bible</span> <span class="app">App</span></h1>
+            <button id="darkModeToggle">Dark Mode</button> 
+        </div>
+
+        <div class="top-buttons">
+            <div class="pills-container">
+                <div class="pill" id="combinedPill">
+                    <span id="bookPill" data-value="John">
+                        <select id="bookSelect"></select>
+                    </span>
+                    <span id="chapterPill" data-value="3">
+                        <select id="chapterSelect"></select>
+                    </span>
+                    <span id="versionPill" data-value="KJV">
+                        <select id="versionSelectTop">
+                            <option value="KJV">KJV</option>
+                            <option value="ASV">ASV</option>
+                            <option value="WEB">WEB</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <p class="instruction-text">Select a Bible book to read from the tabs on left or search for one below!</p>
+            <div class="font-buttons">
+                <button id="decreaseFont">-</button>
+                <button id="increaseFont">+</button>
+            </div>
+        </div>
+
+        <div class="search-container"> 
+            <input type="text" id="questionInput" placeholder="Enter Bible Book, Chapter, Verse, or multiple verses separated by ';'. (e.g., John, Mark 5:6; Romans 8:28-31)"> 
+            <button id="searchButton">Search</button>
+        </div> 
+
+        <div class="chapter-navigation">
+            <button id="copySelectedTop">Copy Selected Verse</button> 
+            <button id="shareSelectedTop">Share Selected Verse</button> 
+            <button id="prevChapterTop">Previous Chapter</button> 
+            <button id="nextChapterTop">Next Chapter</button>
+            <div id="shareOptionsTop" class="share-options" style="display: none;"> 
+                <a href="#" id="shareFacebookTop" onclick="shareOnFacebook()">Facebook</a> |
+                <a href="#" id="shareXTop">X</a> |
+                <a href="#" id="shareRedditTop">Reddit</a> |
+                <a href="#" id="shareGoogleDocsTop">Google Docs</a> |
+                <a href="#" id="shareWordTop">Word</a> |
+                <a href="#" id="shareEmailTop">Email</a> |
+                <a href="#" id="shareTextTop">Text</a> 
+            </div>
+        </div>
+
+        <div id="answerDisplay"></div>
+
+        <div class="chapter-navigation">
+            <button id="copySelected">Copy Selected Verse</button>
+            <button id="shareSelected">Share Selected Verse</button> 
+            <button id="prevChapter">Previous Chapter</button> 
+            <button id="nextChapter">Next Chapter</button>
+            <div id="shareOptions" class="share-options" style="display: none;"> 
+                <a href="#" id="shareFacebook" onclick="shareOnFacebook()">Facebook</a> |
+                <a href="#" id="shareX">X</a> | 
+                <a href="#" id="shareReddit">Reddit</a> |
+                <a href="#" id="shareGoogleDocs">Google Docs</a> |
+                <a href="#" id="shareWord">Word</a> |
+                <a href="#" id="shareEmail">Email</a> |
+                <a href="#" id="shareText">Text</a> 
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
