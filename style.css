@@ -242,7 +242,7 @@ button:active {
 }
 
 .pill span {
-  margin: 0 5px; /* Add some space between the spans */
+  margin: 0 5px; 
   padding: 5px 10px;
   border-radius: 15px;
   background-color: white; 
@@ -257,10 +257,10 @@ button:active {
   border: none;
   background: none; 
   color: black; 
-  padding: 0; /* Remove extra padding from select */
+  padding: 0; 
   border-radius: 15px;
   cursor: pointer;
-  -webkit-appearance: none; /* For some browsers */
+  -webkit-appearance: none; 
   -moz-appearance: none;
   appearance: none;
 }
@@ -408,6 +408,10 @@ button:active {
   color: #eee; 
 }
 
+.dark-mode .share-options a { 
+  color: #eee; 
+}
+
 /* --- Highlighted Verse --- */
 .highlighted {
   background-color: #add8e6; 
@@ -437,26 +441,30 @@ button:active {
 
 /* --- Responsiveness --- */
 
-@media (max-width: 600px) {
-  .container {
-    max-width: 95%;
-    margin: 10px;
-  }
-
-  input[type="text"],
-  select {
-    width: 100%;
-  }
-
-  .navigation,
-  .chapter-navigation {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navigation button,
+@media (max-height: 400px) { 
   .chapter-navigation button {
-    margin-top: 5px;
-    width: 100%;
+    font-size: 0.8em; 
+    padding: 8px 10px; 
+  }
+
+  .pill { 
+    font-size: 1em;  
+    padding: 6px 10px;  
+  }
+
+  .pill span {
+    padding: 6px 10px;  
+  }
+
+  .pill span select {
+    font-size: 1em;  
+  }
+
+  .pill span#chapterPill { 
+    min-width: 5ch; 
+  }
+
+  .pill span#versionPill { 
+    min-width: 5.5ch; 
   }
 }

@@ -58,9 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Daily Devotional Button --- 
     const dailyDevotionalButton = document.getElementById('dailyDevotionalButton');
+
     dailyDevotionalButton.addEventListener('click', () => {
-        console.log("Daily Devotional button clicked");
+      window.location.href = 'https://jaytrust150.github.io/daily-devotional/'; 
     });
+
+    // --- Dark Mode Toggle ---
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            darkModeToggle.textContent = 'Light Mode';
+        } else {
+            darkModeToggle.textContent = 'Dark Mode';
+        }
+        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.textContent = 'Light Mode';
+    }
 
     // --- Font Size Functionality ---
     const answerDisplay = document.getElementById('answerDisplay');
@@ -586,7 +605,7 @@ function shareSelectedVerses() {
         // Example: Share via Facebook
         const shareFacebook = document.querySelectorAll('#shareFacebook, #shareFacebookTop');
         shareFacebook.forEach(facebook => {
-            facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://google.com')}`;
+            facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://jaytrust150.github.io/bible-app/')}`;
             facebook.target = '_blank';
         });
 
@@ -666,28 +685,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastVerse = localStorage.getItem('lastVerse');
 
     // --- Daily Devotional Button --- 
-    const dailyDevotionalButton = document.getElementById('dailyDevotionalButton');
-    dailyDevotionalButton.addEventListener('click', () => {
-        console.log("Daily Devotional button clicked");
-    });
+const dailyDevotionalButton = document.getElementById('dailyDevotionalButton');
 
-    // --- Dark Mode Toggle ---
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-            darkModeToggle.textContent = 'Light Mode';
-        } else {
-            darkModeToggle.textContent = 'Dark Mode';
-        }
-        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-    });
+dailyDevotionalButton.addEventListener('click', () => {
+    window.location.href = 'https://your-daily-devotional-app-url.com/index.html'; // Replace with the actual URL of your Daily Devotional app
+});
 
-    // Check for saved dark mode preference
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-        darkModeToggle.textContent = 'Light Mode';
-    }
+    
+
 
     // --- Font Size Functionality ---
     const answerDisplay = document.getElementById('answerDisplay');
