@@ -688,7 +688,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const dailyDevotionalButton = document.getElementById('dailyDevotionalButton');
 
 dailyDevotionalButton.addEventListener('click', () => {
-    window.location.href = 'https://your-daily-devotional-app-url.com/index.html'; // Replace with the actual URL of your Daily Devotional app
+    window.location.href = 'https://jaytrust150.github.io/daily-devotional/'; // Replace with the actual URL of your Daily Devotional app
 });
 
     
