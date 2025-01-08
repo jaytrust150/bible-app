@@ -468,3 +468,11 @@ button:active {
     min-width: 5.5ch; 
   }
 }
+#answerDisplay .verse-container:hover {
+  background-color: lightyellow; 
+}
+
+.dark-mode #answerDisplay .verse-container:hover {
+  background-color: lightyellow; /* A darker teal color for better contrast */
+  color: black; /* Change text color to black for readability */
+}
